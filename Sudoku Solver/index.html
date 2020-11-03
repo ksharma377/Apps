@@ -1,338 +1,338 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sudoku Solver</title>
-	<link rel="shortcut icon" type="image/jpg" href="images/sudoku-solver-icon.jpg">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/sudoku-solver.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/sudoku-solver.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudoku Solver</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/sudoku-solver-icon.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/sudoku-solver.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/sudoku-solver.js"></script>
 </head>
 <body>
-	<div class="top-bar">
-		Sudoku Solver
-	</div>
-	<div id="container">
-		<div id="puzzle-grid">
-			<div class="custom-row">
-				<div class="cell light">
-					<input id="11" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="12" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="13" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="14" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="15" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="16" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="17" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="18" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="19" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell light">
-					<input id="21" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="22" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="23" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="24" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="25" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="26" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="27" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="28" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="29" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell light">
-					<input id="31" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="32" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="33" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="34" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="35" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="36" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="37" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="38" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="39" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell dark">
-					<input id="41" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="42" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="43" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="44" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="45" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="46" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="47" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="48" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="49" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell dark">
-					<input id="51" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="52" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="53" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="54" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="55" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="56" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="57" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="58" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="59" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell dark">
-					<input id="61" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="62" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="63" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="64" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="65" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="66" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="67" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="68" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="69" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell light">
-					<input id="71" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="72" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="73" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="74" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="75" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="76" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="77" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="78" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="79" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell light">
-					<input id="81" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="82" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="83" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="84" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="85" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="86" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="87" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="88" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="89" type="tel">
-				</div>
-			</div>
-			<div class="custom-row">
-				<div class="cell light">
-					<input id="91" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="92" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="93" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="94" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="95" type="tel">
-				</div>
-				<div class="cell dark">
-					<input id="96" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="97" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="98" type="tel">
-				</div>
-				<div class="cell light">
-					<input id="99" type="tel">
-				</div>
-			</div>
-		</div>
+  <div class="top-bar">
+    Sudoku Solver
+  </div>
+  <div id="container">
+    <div id="puzzle-grid">
+      <div class="custom-row">
+        <div class="cell light">
+          <input id="11" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="12" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="13" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="14" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="15" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="16" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="17" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="18" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="19" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell light">
+          <input id="21" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="22" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="23" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="24" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="25" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="26" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="27" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="28" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="29" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell light">
+          <input id="31" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="32" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="33" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="34" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="35" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="36" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="37" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="38" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="39" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell dark">
+          <input id="41" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="42" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="43" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="44" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="45" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="46" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="47" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="48" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="49" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell dark">
+          <input id="51" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="52" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="53" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="54" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="55" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="56" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="57" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="58" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="59" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell dark">
+          <input id="61" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="62" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="63" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="64" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="65" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="66" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="67" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="68" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="69" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell light">
+          <input id="71" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="72" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="73" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="74" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="75" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="76" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="77" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="78" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="79" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell light">
+          <input id="81" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="82" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="83" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="84" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="85" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="86" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="87" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="88" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="89" type="tel">
+        </div>
+      </div>
+      <div class="custom-row">
+        <div class="cell light">
+          <input id="91" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="92" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="93" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="94" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="95" type="tel">
+        </div>
+        <div class="cell dark">
+          <input id="96" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="97" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="98" type="tel">
+        </div>
+        <div class="cell light">
+          <input id="99" type="tel">
+        </div>
+      </div>
+    </div>
 
-		<button id="solve-button" class="custom-button">Solve</button>
-		<button id="reset-button" class="custom-button">Reset</button>
+    <button id="solve-button" class="custom-button">Solve</button>
+    <button id="reset-button" class="custom-button">Reset</button>
 
-	</div>
+  </div>
 
-	<div id="invalid-sudoku-input-modal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content custom-font">
-				<div class="modal-header dark bold-font">
-					Invalid Sudoku!
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body light">
-					The sudoku you're trying to solve is not valid. Please check for repetitions and try again.
-				</div>
-			</div>
-		</div>
-	</div>
+  <div id="invalid-sudoku-input-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content custom-font">
+        <div class="modal-header dark bold-font">
+          Invalid Sudoku!
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body light">
+          The sudoku you're trying to solve is not valid. Please check for repetitions and try again.
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div id="minimum-not-met-modal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content custom-font">
-				<div class="modal-header dark bold-font">
-					Invalid Sudoku!
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body light">
-					You've entered less than 17 numbers. In this case, the solution is not unique.<br>
-					Please enter at least 17 numbers to proceed.
-				</div>
-			</div>
-		</div>
-	</div>
+  <div id="minimum-not-met-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content custom-font">
+        <div class="modal-header dark bold-font">
+          Invalid Sudoku!
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body light">
+          You've entered less than 17 numbers. In this case, the solution is not unique.<br>
+          Please enter at least 17 numbers to proceed.
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div id="unsolvable-sudoku-modal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content custom-font">
-				<div class="modal-header dark bold-font">
-					Unsolvable Sudoku!
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body light">
-					No solution exists for this Sudoku. Please try a different one!
-				</div>
-			</div>
-		</div>
-	</div>
+  <div id="unsolvable-sudoku-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content custom-font">
+        <div class="modal-header dark bold-font">
+          Unsolvable Sudoku!
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body light">
+          No solution exists for this Sudoku. Please try a different one!
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<!-- <div class="custom-footer">
-		Copyright © NeverSayDie
-	</div> -->
+  <!-- <div class="custom-footer">
+    Copyright © NeverSayDie
+  </div> -->
 
 </body>
 </html>
